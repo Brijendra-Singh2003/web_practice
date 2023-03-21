@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(55, 55, 55);
+}
+.logo{
+    transition-duration: 200ms;
+    padding: 0.5%;
+    object-fit: contain;
+    width: 70px;
+    margin-right: 1.5%;
+    border-radius: 10px;;
+}
+.logo:hover{
+    scale: 1.1;
+    box-shadow: 0 0 4px;
+}
+header{
+    display: flex;
+    background-color: rgb(126, 0, 222);
+    height: 80px;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu_icon{
+    margin-left: 3%;
+}
+.bar{
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    transition-duration: 0.3s;
+}
+.change .bar1{
+    transform-origin: right;
+    translate: 0 -1px;
+    rotate: -45deg;
+}
+.change .bar2{
+    rotate: y 90deg;
+}
+.change .bar3{
+    transform-origin: right;
+    translate: 0 1px;
+    rotate: 45deg;
+}
+.menu{
+    background-color: rgb(45, 0, 69);
+    color:beige;
+    transition:.3s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: -200px;
+    top: 80px;
+    width: 200px;
+    height: 190px;
+}
+.menu div{
+    margin: 10px 0 0 10px;
+    font-size: xx-large;
+}
+.change .menu{
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    translate: 200px 0;
+}
