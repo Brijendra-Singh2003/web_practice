@@ -21,7 +21,7 @@ body{
 }
 header{
     display: flex;
-    background-color: rgb(126, 0, 222);
+    background-image: linear-gradient(90deg, rgb(191, 0, 255), rgb(140, 0, 255));
     height: 80px;
     width: 100vw;
     align-items: center;
@@ -37,36 +37,51 @@ header{
     margin: 6px 0;
     transition-duration: 0.3s;
 }
-.change .bar1{
+.menu_icon:hover .bar1{
     transform-origin: right;
-    translate: 0 -1px;
+    translate: -5px -1.5px;
     rotate: -45deg;
 }
-.change .bar2{
+.menu_icon:hover .bar2{
     rotate: y 90deg;
 }
-.change .bar3{
+.menu_icon:hover .bar3{
     transform-origin: right;
-    translate: 0 1px;
+    translate: -5px 1.5px;
     rotate: 45deg;
 }
 .menu{
     background-color: rgb(45, 0, 69);
     color:beige;
-    transition:.3s;
+    transition-duration: 300ms;
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: -200px;
+    border-radius: 10px;
     top: 80px;
     width: 200px;
-    height: 190px;
+    height:0;
+    overflow: hidden;
 }
-.menu div{
-    margin: 10px 0 0 10px;
+.menu a{
+    box-sizing: border-box;
+    padding: 10px 0 10px 20px;
     font-size: xx-large;
+    transition-duration: 300ms;
 }
-.change .menu{
-    box-shadow: 0 0 5px rgb(0, 0, 0);
-    translate: 200px 0;
+.menu a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+.menu:hover a{
+    scale: 0.9;
+    opacity: 0.25;
+}
+.menu a:hover{
+    opacity: 1;
+    scale: 1.05;
+}
+.menu_icon:hover .menu{
+    height: 200px;
+    animation-duration: 1500ms;
 }
