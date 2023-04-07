@@ -15,40 +15,28 @@
 }
 .logo{
     object-fit: contain;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     margin-right: 2%;
     border-radius: 25px;
-    box-shadow: 0 0 5px;
 }
 header{
     background-color:  rgb(30, 30, 120);
-    height: 65px;
+    height: 60px;
     width: 100vw;
     justify-content: space-between;
 }
 .menu_icon{
-    padding: 3%;
+    padding: 3% 2%;
 }
 .bar{
     width: 35px;
     height: 5px;
     background-color: rgb(0, 0, 0);
     margin: 6px 0;
-    transition-duration: 0.3s;
 }
-.menu_icon:hover .bar1{
-    transform-origin: right;
-    translate: -5px -1.5px;
-    rotate: -45deg;
-}
-.menu_icon:hover .bar2{
-    rotate: y 90deg;
-}
-.menu_icon:hover .bar3{
-    transform-origin: right;
-    translate: -5px 1.5px;
-    rotate: 45deg;
+.home_menu{
+    left: -10em;
 }
 .menu{
     background-color: rgb(45, 0, 69);
@@ -57,16 +45,13 @@ header{
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 0;
-    top: 65px;
-    width: 200px;
-    height:0;
-    overflow: hidden;
+    top: 60px;
+    width: fit-content;
 }
 .menu a{
     box-sizing: border-box;
-    padding: 10px 0 10px 20px;
-    font-size: xx-large;
+    padding: 10px 20px;
+    font-size: x-large;
     transition-duration: 300ms;
     text-decoration: none;
     color:rgb(255, 255, 255);
@@ -78,37 +63,37 @@ header{
     opacity: 1;
     scale: 1.05;
 }
-.menu_icon:hover .menu{
-    height: 180px;
+.menu_icon:hover .home_menu{
+    left: 0;
 }
 
+.search_bar{
+    padding: 0 0 0 2vh;
+    background-color: rgb(255, 255, 255);
+    height: 36px;
+    width:100%;
+    border-radius: 18px;
+    border: none;
+    font-size: 18px;
+}
 .search{
     position: relative;
     height: 100%;
     width: min(60vw, 700px);
     justify-content: center;
 }
-.search_bar{
-    padding: 0 0 0 2vh;
-    background-color: rgb(255, 255, 255);
-    height: 45px;
-    width:100%;
-    border-radius: 30px;
-    border: none;
-    font-size: 20px;
-}
 .search_button{
     position: absolute;
     right: 0;
-    height: 40px;
-    width: 6vh;
+    height: 36px;
+    width: 40px;
     border: none;
     background-color: white;
-    border-radius: 0 4vh 4vh 0 ;
+    border-radius: 0 18px 18px 0 ;
     border-left: 3px solid rgba(0, 0, 0, 0.219);
 }
 
-main{
+.banner{
     background-color: rgba(255, 255, 255, 0.064);
     width: 100vw;
     height: max(30vh, 40vw);
@@ -126,7 +111,7 @@ main{
 
 footer{
     justify-content: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 50px;
     width: 100vw;
