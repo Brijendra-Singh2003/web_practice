@@ -19,15 +19,6 @@ function pageChange(h) {
 }
 
 function chatClick(chat) {
-    let info = chat.childNodes;
-    console.log(info[1]);
-    let name = chat.childNodes[3].innerHTML;
-    console.log(name);
-    head.style.height = "10vh";
-    head.innerHTML = `
-        <div class="dp flex">${info[1].innerHTML}</div>
-        <div class="search flex">${name}</div>
-    `;
 }
 
 function home() {
@@ -84,36 +75,17 @@ function chats() {
         </div>
     </div>
     `;
-    main.innerHTML = `
-    <div class="chat_list flex">
-        <div class="chat" onclick="chatClick(this)">
-            <div class="dp flex"><img src="./images/Batman_logo_PNG13.png" alt="dp"></div>
-            <div class="name flex">Brijendra</div>
-            <div class="last_m">last massage</div>
-        </div>
-        
-        <div class="chat" onclick="chatClick(this)">
-            <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">Uttam</div>
-            <div class="last_m">last massage</div>
-        </div>
-        
-        <div class="chat" onclick="chatClick(this)">
-            <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">Paras</div>
-            <div class="last_m">last massage</div>
-        </div>
-        
-        <div class="chat" onclick="chatClick(this)">
-            <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">Harshad</div>
-            <div class="last_m">last massage</div>
-        </div>
-        
-    </div>
-
-    <div class="new_chat"></div>
-    `;
+    main.innerHTML = `<div class="chat_list flex">`;
+    for(let i=1; i<=10; i++) {
+        main.innerHTML += `
+            <div class="chat" onclick="chatClick(this)">
+                <div class="dp flex"><img src="./images/Batman_logo_PNG13.png" alt="dp"></div>
+                <div class="name flex">Person-${i}</div>
+                <div class="last_m">last massage with ${i}</div>
+            </div>
+        `;
+    }
+    main.innerHTML += `<div class="footer_placeholder"></div></div><div class="new_chat flex"><div class="bar b1"></div><div class="bar b2"></div></div></div>`;
 }
 function feed() {
     head.innerHTML = `
