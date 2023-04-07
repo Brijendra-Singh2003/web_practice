@@ -18,6 +18,18 @@ function pageChange(h) {
     currPage = h;
 }
 
+function chatClick(chat) {
+    let info = chat.childNodes;
+    console.log(info[1]);
+    let name = chat.childNodes[3].innerHTML;
+    console.log(name);
+    head.style.height = "10vh";
+    head.innerHTML = `
+        <div class="dp flex">${info[1].innerHTML}</div>
+        <div class="search flex">${name}</div>
+    `;
+}
+
 function home() {
     head.innerHTML = `
         <div class="menu_icon" onclick="myFunction(this)">
@@ -73,28 +85,28 @@ function chats() {
     </div>
     `;
     main.innerHTML = `
-    <div class="chat_list">
-        <div class="chat">
-            <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">name</div>
+    <div class="chat_list flex">
+        <div class="chat" onclick="chatClick(this)">
+            <div class="dp flex"><img src="./images/Batman_logo_PNG13.png" alt="dp"></div>
+            <div class="name flex">Brijendra</div>
             <div class="last_m">last massage</div>
         </div>
         
-        <div class="chat">
+        <div class="chat" onclick="chatClick(this)">
             <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">name</div>
+            <div class="name flex">Uttam</div>
             <div class="last_m">last massage</div>
         </div>
         
-        <div class="chat">
+        <div class="chat" onclick="chatClick(this)">
             <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">name</div>
+            <div class="name flex">Paras</div>
             <div class="last_m">last massage</div>
         </div>
         
-        <div class="chat">
+        <div class="chat" onclick="chatClick(this)">
             <div class="dp flex"><img src="#" alt="dp"></div>
-            <div class="name flex">name</div>
+            <div class="name flex">Harshad</div>
             <div class="last_m">last massage</div>
         </div>
         
