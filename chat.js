@@ -7,7 +7,19 @@ function send() {
     temp.scrollTo(0,temp.scrollHeight);
 }
 
-function scrol() {
+function key(t) {
+    if(t.keyCode == 13) 
+    send();
+}
+
+function load() {
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+    // Retrieve
+    document.getElementById("name").innerHTML = localStorage.getItem("name");
+    } else {
+    document.getElementById("result").innerHTML = "Browser does not support Web Storage.";
+    }
     const temp = document.getElementById("main");
     temp.scrollTo(0,temp.scrollHeight);
 }

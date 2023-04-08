@@ -8,15 +8,15 @@
     <script src="./chat.js"></script>
     <title>chats</title>
 </head>
-<body onload="scrol()">
+<body onload="load()">
     <header>
         <!-- <div class="back"></div> -->
-        <img src="../images/Batman_logo_PNG13.png" alt="" class="dp">
+        <img src="./images/Batman_logo_PNG13.png" alt="" class="dp">
         <div class="name" id="name">Brijendra</div>
     </header>
     <main id="main"></main>
     <footer>
-        <input type="text" name="" id="input" class="input" onsubmit="send()" placeholder="Message">
+        <input type="text" name="" id="input" class="input" onkeypress="key(event)" placeholder="Message">
         <button class="send input" onclick="send()"></button>
     </footer>
 </body>
