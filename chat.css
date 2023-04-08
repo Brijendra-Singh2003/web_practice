@@ -10,7 +10,7 @@ body{
     grid-template-rows: max(8vh, 8vw) auto max(7vh, 7vw);
     flex-direction: column;
     background-image: linear-gradient(rgb(23, 23, 23), rgb(0, 0, 0));
-    height: 100vh;
+    height: 100dvh;
 }
 
 header{
